@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>acid-breakout-compute</title>
+  </head>
+  <body>
+  <header id="hud">
+    <h1 class="hud-title">Acid Breakout</h1>
+    <label class="hud-size">
+      <input id="input-width" type="number" min="64" max="3840" step="10" value="600" />
+      <span>×</span>
+      <input id="input-height" type="number" min="64" max="2160" step="10" value="600" />
+    </label>
+    <button id="btn-resize" type="button">Resize</button>
+    <button id="btn-fill" type="button">Fill Viewport</button>
+    <button id="btn-reset" type="button">Reset</button>
+  </header>
+
+    <canvas width="600" height="600" id="main"></canvas>
+    <div id="fps-counter"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
