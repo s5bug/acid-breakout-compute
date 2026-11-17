@@ -127,7 +127,7 @@ void main() {
     // if we collide with something, we add the collision point to the history
     bool hasCollision = false;
 
-    if (rectOverlaps(targetMin, targetMax, u_paddleRect.xy, u_paddleRect.zw)) {
+    if (rectOverlaps(targetMin, targetMax, u_paddleRect.xy, u_paddleRect.zw) && vel.y <= 0.0) {
         // we have a velocity in [-1, 1]² and aspectScale lets us convert that to pixel scale
         vec2 aspectScale = u_viewportSize * 0.5;
         // so this is the current velocity in pixels
