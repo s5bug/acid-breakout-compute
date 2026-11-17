@@ -120,7 +120,7 @@ const frameCb = (t: DOMHighResTimeStamp) => {
     lastFps = t
   }
 
-  frameFunc(dtS, tS)
+  frameFunc(Math.min(dtS, 0.1), tS)
   requestAnimationFrame(frameCb)
 }
 requestAnimationFrame(frameCb)
